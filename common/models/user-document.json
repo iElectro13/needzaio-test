@@ -20,7 +20,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "typeDocument": {
+      "type": "belongsTo",
+      "model": "TypeDocument",
+      "foreignKey": "TypeDocumentId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
