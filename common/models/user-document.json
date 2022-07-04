@@ -1,0 +1,26 @@
+{
+  "name": "UserDocument",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Document": {
+      "type": "string",
+      "required": true
+    },
+    "PlaceExpedition": {
+      "type": "string",
+      "required": true
+    },
+    "DateExpedition": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

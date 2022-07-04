@@ -42,5 +42,9 @@
   "TypeDocument": {
     "dataSource": "db",
     "public": true
+  },
+  "UserDocument": {
+    "dataSource": "db",
+    "public": true
   }
 }
