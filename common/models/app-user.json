@@ -38,6 +38,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "contactInfos": {
+      "type": "hasOne",
+      "model": "ContactInfo",
+      "foreignKey": "UserId",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

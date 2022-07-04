@@ -40,6 +40,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "appUser": {
+      "type": "belongsTo",
+      "model": "AppUser",
+      "foreignKey": "UserId",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],
