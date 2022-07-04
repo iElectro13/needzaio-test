@@ -34,5 +34,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Country": {
+    "dataSource": "db",
+    "public": true
+  },
+  "TypeDocument": {
+    "dataSource": "db",
+    "public": true
   }
 }
