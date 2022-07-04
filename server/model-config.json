@@ -46,5 +46,9 @@
   "UserDocument": {
     "dataSource": "db",
     "public": true
+  },
+  "ContactInfo": {
+    "dataSource": "db",
+    "public": true
   }
 }
