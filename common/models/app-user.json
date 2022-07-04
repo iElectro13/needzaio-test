@@ -30,7 +30,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "userDocuments": {
+      "type": "hasMany",
+      "model": "UserDocument",
+      "foreignKey": "UserId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
