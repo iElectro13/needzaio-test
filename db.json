@@ -1,0 +1,36 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Country": 1,
+    "TypeDocument": 1,
+    "UserDocument": 3,
+    "ContactInfo": 3,
+    "AppUser": 4
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Country": {},
+    "TypeDocument": {},
+    "UserDocument": {
+      "1": "{\"DocumentNumber\":\"1231241\",\"PlaceExpedition\":\"1231251\",\"DateExpedition\":\"1970-01-01T00:02:03.141Z\",\"TypeDocumentId\":123211,\"UserId\":1,\"id\":1}",
+      "2": "{\"DocumentNumber\":\"123124111\",\"PlaceExpedition\":\"1231251\",\"DateExpedition\":\"1970-01-01T00:02:03.141Z\",\"TypeDocumentId\":123211,\"UserId\":3,\"id\":2}"
+    },
+    "ContactInfo": {
+      "1": "{\"Address\":\"1231231\",\"City\":\"1232131\",\"Phone\":\"123141\",\"CellPhone\":\"1231231\",\"EmergencyName\":\"1231\",\"EmergencyPhone\":\"12311\",\"CountryId\":1231,\"UserId\":1,\"id\":1}",
+      "2": "{\"Address\":\"1231231\",\"City\":\"1232131\",\"Phone\":\"123141\",\"CellPhone\":\"1231231\",\"EmergencyName\":\"1231\",\"EmergencyPhone\":\"12311\",\"CountryId\":1231,\"UserId\":3,\"id\":2}"
+    },
+    "AppUser": {
+      "1": "{\"LastName\":\"123151\",\"Name\":\"1231251\",\"IsMilitar\":true,\"IsTemporal\":true,\"username\":\"3456\",\"password\":\"$2b$08$gqpLI.3nr3z7/P4sOD.piOcG7ebRj9xVbV2LaR4nuiQtPR4zzsZKS\",\"email\":\"ejose.ac@gmail.com\",\"id\":1}",
+      "2": "{\"LastName\":\"123151\",\"Name\":\"1231251\",\"IsMilitar\":true,\"IsTemporal\":true,\"username\":\"34562\",\"password\":\"$2b$08$nj4zqPtwYhsfgAdSqVohSeC5bUydjguBk0dPnzkgyOY2EXzF/VAoK\",\"email\":\"ejose.acc@gmail.com\",\"id\":2}",
+      "3": "{\"LastName\":\"123151\",\"Name\":\"1231251\",\"IsMilitar\":true,\"IsTemporal\":true,\"username\":\"a34562\",\"password\":\"$2b$08$Dm75Z/M622m.X4Vn0Lk96eWm8a8Kw/J08QPgv4lIhmXbk3aDHx.gq\",\"email\":\"ejose.accc@gmail.com\",\"id\":3}"
+    }
+  }
+}

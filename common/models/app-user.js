@@ -56,11 +56,17 @@ module.exports = function(Appuser) {
       if (err) {
         cb(err);
       } else {
-        userdocument.create(userDocument, function(err, userDocument) {
+        userdocument.create({
+          UserId: user.id,
+          ...userDocument,
+        }, function(err, userDocument) {
           if (err) {
             cb(err);
           } else {
-            contactinfo.create(contactInfo, function(err, contactInfo) {
+            contactinfo.create({
+              UserId: user.id,
+              ...contactInfo,
+            }, function(err, contactInfo) {
               if (err) {
                 cb(err);
               } else {
