@@ -219,6 +219,7 @@ module.exports = function(Appuser) {
         },
       },
     ],
+    description: 'Register a new user with ContactInfo and UserDocument',
     http: {
       path: '/registerUser',
     },
