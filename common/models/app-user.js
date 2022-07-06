@@ -1,45 +1,62 @@
 'use strict';
 
-const Userdocument = require('../models/user-document');
-const Contactinfo = require('../models/contact-info');
+const userdocument = require('loopback').getModel('UserDocument');
+const contactinfo = require('loopback').getModel('ContactInfo');
 
 module.exports = function(Appuser) {
-  Appuser.registerUser = function(data, cb) {
+  Appuser.registerUser = function(
+    username,
+    password,
+    email,
+    LastName,
+    Name,
+    IsMilitar,
+    DocumentNumber,
+    TypeDocumentId,
+    PlaceExpedition,
+    DateExpedition,
+    Phone,
+    CellPhone,
+    Address,
+    City,
+    CountryId,
+    EmergencyName,
+    EmergencyPhone,
+    cb
+  ) {
     const userInfo = {
-      username: data.username,
-      password: data.password,
-      email: data.email,
-      LastName: data.LastName,
-      Name: data.Name,
-      IsMilitar: data.IsMilitar,
+      username,
+      password,
+      email,
+      LastName,
+      Name,
+      IsMilitar,
     };
     const userDocument = {
-      Document: data.Document,
-      TypeDocumentId: data.TypeDocumentId,
-      PlaceExpedition: data.PlaceExpedition,
-      DateExpedition: data.DateExpedition,
+      DocumentNumber,
+      TypeDocumentId,
+      PlaceExpedition,
+      DateExpedition,
     };
     const contactInfo = {
-      Phone: data.Phone,
-      Cellphone: data.Cellphone,
-      Address: data.Address,
-      City: data.City,
-      CountryId: data.CountryId,
-      EmergencyName: data.EmergencyName,
-      EmergencyPhone: data.EmergencyPhone,
+      Phone,
+      CellPhone,
+      Address,
+      City,
+      CountryId,
+      EmergencyName,
+      EmergencyPhone,
     };
-
-    console.log(data);
 
     Appuser.create(userInfo, function(err, user) {
       if (err) {
         cb(err);
       } else {
-        Userdocument.create(userDocument, function(err, userDocument) {
+        userdocument.create(userDocument, function(err, userDocument) {
           if (err) {
             cb(err);
           } else {
-            Contactinfo.create(contactInfo, function(err, contactInfo) {
+            contactinfo.create(contactInfo, function(err, contactInfo) {
               if (err) {
                 cb(err);
               } else {
@@ -104,7 +121,7 @@ module.exports = function(Appuser) {
         },
       },
       {
-        arg: 'Document',
+        arg: 'DocumentNumber',
         type: 'string',
         required: true,
         http: {
@@ -129,7 +146,7 @@ module.exports = function(Appuser) {
       },
       {
         arg: 'DateExpedition',
-        type: 'string',
+        type: 'date',
         required: true,
         http: {
           source: 'form',
@@ -144,7 +161,7 @@ module.exports = function(Appuser) {
         },
       },
       {
-        arg: 'Cellphone',
+        arg: 'CellPhone',
         type: 'string',
         required: true,
         http: {
@@ -196,7 +213,9 @@ module.exports = function(Appuser) {
       path: '/registerUser',
     },
     returns: {
-      arg: 'data', type: 'object', root: true,
+      arg: 'data',
+      type: 'object',
+      root: true,
     },
   });
 };
