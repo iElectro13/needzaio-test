@@ -1,5 +1,7 @@
 'use strict';
 
+const bycrypt = require('bcrypt');
+
 const userdocument = require('loopback').getModel('UserDocument');
 const contactinfo = require('loopback').getModel('ContactInfo');
 
@@ -24,9 +26,11 @@ module.exports = function(Appuser) {
     EmergencyPhone,
     cb
   ) {
+    const hashedPassword = bycrypt.hashSync(password, 8);
+
     const userInfo = {
       username,
-      password,
+      password: hashedPassword,
       email,
       LastName,
       Name,
@@ -186,7 +190,7 @@ module.exports = function(Appuser) {
       },
       {
         arg: 'CountryId',
-        type: 'string',
+        type: 'number',
         required: true,
         http: {
           source: 'form',
